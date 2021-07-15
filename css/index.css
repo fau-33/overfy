@@ -7,10 +7,10 @@
 
   /* typography */
   font-size:10px;
-  --sd-font-size: 1.5rem;
+  --sd-font-size: 2rem;
   --medium-font-size: 2.5rem;
   --big-font-size: 3.5rem;
-  --h1-font-size: 5.5rem;
+  --h1-font-size: 7.5rem;
   --li-font-size: 1.8rem;
 
   /* padding */
@@ -81,7 +81,7 @@ button {
   max-width: 280px;
 }
 .logo img {
-  width: 90%;
+  width: 100%;
 }
 /* menu-toggle-container */
 .menu-toggle-container {
@@ -126,8 +126,8 @@ button {
 .main {
   display: grid;
   grid-template-areas:
-   "greetings greetings"
-   "best-destinations best-destinations"
+   "greetings" "greetings"
+   "best-destinations" "best-destinations"
    "reasons-to-travel" "reasons-to-travel"
    "prices" "prices";
 }
@@ -149,9 +149,6 @@ button {
   font-weight: 700;
   line-height: 1.25;
 }
-.content-invite p span {
-  color: var(--color-secondary);
-}
 .content p {
   font-size: var(--sd-font-size);
   font-weight: 600;
@@ -159,6 +156,10 @@ button {
   text-align: justify;
   padding-top: 2rem;
 }
+.content-invite p span {
+  color: var(--color-secondary);
+}
+
 /* figure-travelling */
 .figure-travelling {
   display: flex;
@@ -166,4 +167,99 @@ button {
 }
 .figure-travelling img {
   width: 90%;
+}
+/* best-destinations */
+.best-destinations {
+  grid-area: best-destinations;
+  padding-bottom: var(--sd-padding-size);
+}
+/* trip-container */
+.trip-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: var(--sd-padding-size);
+}
+/* trip-card */
+.trip-card {
+  width: 30%;
+  height: 500px;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/* card-one */
+#card-one {
+  background-image: url(/images/brooklyn.jpg);
+}
+/* card-two */
+#card-two {
+  background-image: url(/images/praia.jpg);
+}
+/* card-three */
+#card-three {
+  background-image: url(/images/montanhas.jpg);
+}
+/* trip-name */
+.trip-name {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: var(--color-secondary);
+  padding: 2rem;
+  max-height: 86px;
+  height: 100%;
+}
+.trip-name p {
+  font-size: var(--sd-font-size);
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center;
+}
+/* reasons-to-travel */
+.reasons-to-travel {
+  grid-area: reasons-to-travel;
+  padding-bottom: var(--sd-padding-size);
+}
+/* reasons-container */
+.reasons-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, auto));
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--sd-padding-size);
+}
+/* header-item */
+.header-item {
+  display: flex;
+  align-items: center;
+}
+.header-item span {
+  font-size: var(--big-font-size);
+  font-weight: 700;
+  color: var(--color-primary);
+  padding-right: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  max-width: 56px;
+}
+/* travelers */
+.travelers {
+  display: flex;
+  justify-content:flex-end;
+}
+.travelers img {
+  width: 90%;
+}
+/* reason-item */
+.reasons-item p{
+  font-size: var(--sd-font-size);
+  font-weight: 400;
+  color: var(--color-primary);
+  text-align: justify;
+  padding: 2rem 0;
+  padding-left: 5rem;
+  width: 75%;
 }
